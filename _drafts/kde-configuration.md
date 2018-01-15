@@ -43,6 +43,10 @@ Enable these effects:
 * *Focus* -> *Dialog Parent*
 * *Focus* -> *Dim Screen for Administrator Mode*
 
+### Screen Edges
+
+Add the *Application Launcher* action to the lower-left corner of the screen. Clear all other corner/edge actions.
+
 ### Screen Locking
 
 Change from 5 min to 10 min.
