@@ -27,7 +27,6 @@ Starting from the *Defaults*, disable these effects:
 * *Appearance* -> *Login*
 * *Appearance* -> *Maximize*
 * *Appearance* -> *Morphing popups*
-* *Appearance* -> *Morphing popups*
 * *Appearance* -> *Translucency*
 * *Appearance* -> *Window Aperture*
 * *Appearance* -> *logout*
@@ -37,7 +36,7 @@ Starting from the *Defaults*, disable these effects:
 * *Window Management* -> *Present Windows*
 
 Enable these effects:
-* *Appearance* -> *Desaturate Unresponsive Applications*
+* *Appearance* -> *Desaturate Unresponsive Applications* (>= KDE 5.10)
 * *Appearance* -> *Screen Edge*
 * *Appearance* -> *Sliding popups*
 * *Focus* -> *Dialog Parent*
@@ -60,6 +59,12 @@ Set number of desktops to 3, and number of rows to 3. Use the names *Alpha*, *Be
 #### Switching
 
 Disable *Desktop navigation wraps around*. Disable the keyboard shortcuts for switching directly to desktops, and enable *Ctrl+Alt+Up* and *Ctrl+Alt+Down* for switching up and down, respectively.
+
+### Accessibility (<= KDE 5.8)
+
+### Bell
+
+Disable *Use system bell*.
 
 ### Activities
 
@@ -106,11 +111,11 @@ Change *Full Screen Mode* to *F11*.
 
 ### Global Shortcuts
 
-#### Accessibility
+#### Accessibility (>= KDE 5.10) or kaccess (<= KDE 5.8)
 
 Disable *Toggle Screen Reader On and Off*.
 
-#### Plasma
+#### Plasma (>= KDE 5.10) or Activity switching (<= KDE 5.8)
 
 Change *Activate Application Launcher Widget* to *Meta+Space*. Disable *Activities...*
 
@@ -124,13 +129,45 @@ Clear all keyboard combinations within this page.
 
 #### System Settings
 
-Change alternate for *Lock Session* to *Meta+L*. Set *Maximize Window* to *Meta+Up*. Clear all *Move Mouse to ...* and *Move Zoomed Area to ...* shortcuts. Set *Quick Tile Window to the Left* and *Quick Tile Window to the Right* to *Meta+Left* and *Meta+Right*, respectively. Clear the *Switch to Window ...* shortcuts. Set the *Window One Desktop Down* and *Window One Desktop Up* to *Ctrl+Alt+Shift+Down* and *Ctrl+Alt+Shift+Up*, respectively.
+Change all of these settings:
+* *Activate Window Demanding Attention*: *Ctrl+Alt+A* -> *none*
+* *Actual Size*: *Meta+0* -> *none*
+* *Halt Without Confirmation*: *Ctrl+Alt+Shift+PgDown* -> *none*
+* *Kill Window*: *Ctrl+Alt+Esc* -> *none*
+* *Lock Session (alternate)*: *none* -> *Meta+L*
+* *Log Out Without Confirmation*: *Ctrl+Alt+Shift+Del* -> *none*
+* *Maximize Window*: *none* -> *Meta+Up*
+* *Move Mouse to Center*: *Meta+F6* -> *none*
+* *Move Mouse to Focus*: *Meta+F5* -> *none*
+* *Move Zoomed Area Downwards*: *Meta+Down* -> *none*
+* *Move Zoomed Area to Left*: *Meta+Left* -> *none*
+* *Move Zoomed Area to Right*: *Meta+Right* -> *none*
+* *Move Zoomed Area Upwards*: *Meta+Up* -> *none*
+* *Quick Tile Window to the Left*: *none* -> *Meta+Left*
+* *Quick Tile Window to the Right*: *none* -> *Meta+Right*
+* *Reboot Without Confirmation*: *Ctrl+Alt+Shift+PgUp* -> *none*
+* *Show Desktop Grid*: *Ctrl+F8* -> *none*
+* *Suspend Compositing*: *Alt+Shift+F12* -> *none*
+* *Switch to Desktop N*: *Ctrl+FN* -> *none* (all of them)
+* *Switch to Window Above*: *Meta+Alt+Up* -> *none*
+* *Switch to Window Below*: *Meta+Alt+Below* -> *none*
+* *Switch to Window to the Left*: *Meta+Alt+Left* -> *none*
+* *Switch to Window to the Right*: *Meta+Alt+Right* -> *none*
+* *Toggle Present Windows (All desktops)*: *Ctrl+F10* -> *none*
+* *Toggle Present Windows (All desktops) alternate*: *Launch (C)* -> *none*
+* *Toggle Present Windows (Current desktop)*: *Ctrl+F9* -> *none*
+* *Toggle Present Windows (Window class)*: *Ctrl+F7* -> *none*
+* *Window One Desktop Down*: *none* -> *Ctrl+Alt+Shift+Down*
+* *Window One Desktop Up*: *none* -> *Ctrl+Alt+Shift+Up*
+* *Window Operations Menu*: *Alt+F3* -> *none*
+* *Zoom In*: *Meta+=* -> *none*
+* *Zoom Out*: *Meta+-* -> *none*
 
-#### Web Shortcuts
+### Web Shortcuts
 
 Disable Web shortcuts.
 
-#### Custom Shortcuts
+### Custom Shortcuts
 
 Create a new *Global Shortcut* -> *Command / URL* called *Terminal* with trigger *Meta+Return* and action *konsole*.
 
@@ -150,7 +187,11 @@ Disable the *Web Shortcuts* plugin.
 
 ## Notifications
 
-### Event source: Notifies when a new printer is detected
+### Event source: Local system message service (<= KDE 5.8)
+
+Disable sounds for all of these events.
+
+### Event source: Notifies when a new printer is detected (>= KDE 5.10)
 
 Disable sounds for all of these events.
 
@@ -185,6 +226,8 @@ Change *Web Browser* to explicitly open *http and https URLs* using a command: *
 
 ### File Associations
 
+For all of these: if the MIME type does not already exist, *there is no need to create it*. Only change the setting if it already exists.
+
 Move *Visual Studio Code* to the top spot for all of these MIME types:
 * *application/javascript*
 * *application/xhtml+xml*
@@ -194,10 +237,10 @@ Move *Visual Studio Code* to the top spot for all of these MIME types:
 * *text/css*
 * *text/markdown*
 * *text/plain*
-* *text/x-fortran* (this might default to the *text/plain* value anyway)
-* *text/x-makefile* (might default to *text/plain*)
-* *text/x-python* (*text/plain*)
-* *text/x-python3* (*text/plain*)
+* *text/x-fortran*
+* *text/x-makefile*
+* *text/x-python*
+* *text/x-python3*
 
 Move *VLC* to the top spot for all of these MIME types:
 * *application/ogg*
@@ -205,9 +248,9 @@ Move *VLC* to the top spot for all of these MIME types:
 * Everything underneath *audio*
 * Everything under *video*
 
-Ensure that *application/pdf* is opened in *Document Viewer* (a.k.a. *Okular*). Ensure that *application/rtf* is opened in *LibreOffice Writer*. Ensure that *text/html* is opened in *Firefox*.
+Ensure that *application/pdf* is opened in *Document Viewer* (a.k.a. *Okular*). Ensure that *application/rtf* is opened in *LibreOffice Writer*. Ensure that *text/html* is opened in *Firefox Latest* (on Debian) or plain *Firefox* (on Fedora).
 
-Move *GIMP* **below the top spot** for everything in *image/\** which provides another choice. Leave it as the top choice (and probably only choice) for *image/x-xcf*.
+For every *image/\** entry where more than one image program is available, move *GIMP* **below** the top spot. It is not a good image previewer. However, leave it as the top choice for *image/x-compressed-xcf* and *image/x-xcf*.
 
 ## Accessibility
 
@@ -217,7 +260,7 @@ Disable *Use system bell*.
 
 # Network
 
-## Connections
+## Connections (>= KDE 5.10)
 
 Connect to wireless networks, set IP settings, etc.
 
@@ -233,7 +276,13 @@ Configure proxy to use an auto configuration URL: [http://localhost:8081/www-pro
 
 ### Keyboard
 
-On *Layouts* page, disable the shortcut(s) for switching layout.
+#### Layouts
+
+Clear the three shortcuts (*Main*, *3rd level*, and *Alternative*) for switching layout.
+
+#### Advanced
+
+Check the box to *Configure keyboard options*. Clear all of the remaining boxes except *Position of Compose key*. Underneath that option, select the check box next to *Menu*.
 
 ### Mouse
 
