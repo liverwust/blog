@@ -249,7 +249,7 @@ Arrange and order displays as desired.
 
 ### Energy Saving
 
-Underneath all three settings  (*On AC Power*, *On Battery*, and *On Low Battery*), switch event *when laptop lid closed* to *Suspend*.
+Underneath all three settings  (*On AC Power*, *On Battery*, and *On Low Battery*), switch event *when laptop lid closed* to *Suspend*. Also, enable *Screen brightness* control and set the slider to max for AC or a reasonable level for battery.
 
 ### Advanced Settings
 
