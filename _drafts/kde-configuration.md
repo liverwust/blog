@@ -260,3 +260,11 @@ At critical battery, choose to *Suspend* rather than to *Hibernate*. Increase *L
 ## Firefox profiles
 
 Ensure that there is one Firefox profile for each of the different Activities. Replace the *Command* for the default Firefox browser with an invocation of */home/louis/bin/firefox_activity_wrapper.sh*.
+
+## Desktop Settings (Plasma)
+
+Right-click anywhere in the empty space for this menu.
+
+### Mouse Actions
+
+Disable the *Vertical Scroll* action (which was *Switch Desktop*).
