@@ -317,3 +317,11 @@ Right-click anywhere in the empty space for this menu.
 ### Mouse Actions
 
 Disable the *Vertical Scroll* action (which was *Switch Desktop*).
+
+## Task Manager Settings (Plasma)
+
+Right-click on the Task Manager bar along the bottom of the screen for this menu.
+
+### General
+
+Enable the *Filters* -> *Show only tasks from the current desktop* option.
